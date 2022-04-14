@@ -51,21 +51,6 @@ public class UI extends Plates implements ActionListener{
 	
 	}
 	
-	protected void calculate() {
-		
-		plate.inputWeight = Double.parseDouble(weightInputField.getText());
-		plate.barWeight = Double.parseDouble(barInputField.getText());
-		
-		plate.calculateWeight(plate.barWeight, plate.inputWeight);
-		
-		fortyFivesNumber.setText(Integer.toString(plate.fortyfneeded));
-		thirtyfivesNumber.setText(Integer.toString(plate.thirtyfneeded));
-		twentyfivesNumber.setText(Integer.toString(plate.twentyfneeded));
-		tensNumber.setText(Integer.toString(plate.tenneeded));
-		fivesNumber.setText(Integer.toString(plate.fiveneeded));
-		twohalffivesNumber.setText(Integer.toString(plate.twohalfneeded));
-	
-	}
 	
 	/**
 	 * Makes the input panel, gets added to the core and displayed.
@@ -77,15 +62,15 @@ public class UI extends Plates implements ActionListener{
 		JLabel barInputText = new JLabel("Barbell Weight:");
 		JPanel inputPanel = new JPanel();
 		
-		weightInputField.setBounds(135, 115, 100, 25);
-		barInputField.setBounds(135, 145, 100, 25);
+		weightInputField.setBounds(160, 115, 100, 25);
+		barInputField.setBounds(160, 145, 100, 25);
 		
 		calculate.setBounds(80, 225, 120, 35);
 		calculate.setText("Calculate");
 		calculate.addActionListener(this);
 		
-		weightInputText.setBounds(20,100,150,50);
-		barInputText.setBounds(20,130,150,50);
+		weightInputText.setBounds(30,100,150,50);
+		barInputText.setBounds(30,130,150,50);
 		
 		weightInputText.setFont(new Font("Georgia", Font.BOLD, 12));
 		barInputText.setFont(new Font("Georgia", Font.BOLD, 12));
@@ -164,6 +149,44 @@ public class UI extends Plates implements ActionListener{
 		platesNeededPanel.setLayout(null);
 		return platesNeededPanel;
 
+		
+	}
+	
+	protected void calculate() {
+		
+		boolean valid = false;
+		 
+		// if the inputs are empty.
+		if (weightInputField.getText().isBlank() || barInputField.getText().isBlank()){
+			valid = false;
+		}
+		else {
+			
+			// if the inputs aren't empty, but they are not yet valid.
+			
+			//if (tempInputWeight.contains(tempBarWeight))
+			
+			try {
+				plate.inputWeight = Double.parseDouble(weightInputField.getText());
+				plate.barWeight = Double.parseDouble(barInputField.getText());
+				plate.calculateWeight(plate.barWeight, plate.inputWeight);
+				
+				fortyFivesNumber.setText(Integer.toString(plate.fortyfneeded));
+				thirtyfivesNumber.setText(Integer.toString(plate.thirtyfneeded));
+				twentyfivesNumber.setText(Integer.toString(plate.twentyfneeded));
+				tensNumber.setText(Integer.toString(plate.tenneeded));
+				fivesNumber.setText(Integer.toString(plate.fiveneeded));
+				twohalffivesNumber.setText(Integer.toString(plate.twohalfneeded));
+				
+				valid = true;
+			}
+			catch(NumberFormatException e) {
+				plate.inputWeight = 0;
+				plate.barWeight = 0;
+				valid = false;
+			}
+			
+		}
 		
 	}
 
