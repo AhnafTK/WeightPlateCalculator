@@ -1,2 +1,2 @@
 # WeightPlateCalculator
-# By: Ahnaf Kamal
+By: Ahnaf Kamal
