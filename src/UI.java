@@ -14,22 +14,22 @@ import javax.swing.border.Border;
 
 public class UI extends Plates implements ActionListener{
 	
-	JFrame core = new JFrame();
-	JButton calculate = new JButton();
+	private JFrame core = new JFrame();
+	private JButton calculate = new JButton();
 	
-	Plates plate = new Plates();
+	private Plates plate = new Plates();
 	
-	JTextField weightInputField = new JTextField();
-	JTextField barInputField = new JTextField();
+	private JTextField weightInputField = new JTextField();
+	private JTextField barInputField = new JTextField();
 	
-	JTextField fortyFivesNumber = new JTextField();
-	JTextField thirtyfivesNumber = new JTextField();
-	JTextField twentyfivesNumber = new JTextField();
-	JTextField tensNumber = new JTextField();
-	JTextField fivesNumber = new JTextField();
-	JTextField twohalffivesNumber = new JTextField();
+	private JTextField fortyFivesNumber = new JTextField();
+	private JTextField thirtyfivesNumber = new JTextField();
+	private JTextField twentyfivesNumber = new JTextField();
+	private JTextField tensNumber = new JTextField();
+	private JTextField fivesNumber = new JTextField();
+	private JTextField twohalffivesNumber = new JTextField();
 	
-	Border blackLine = BorderFactory.createLineBorder(Color.black);
+	private Border blackLine = BorderFactory.createLineBorder(Color.black);
 	
 	protected void startCore() {
 		
@@ -203,6 +203,4 @@ public class UI extends Plates implements ActionListener{
 	}
 	
 	
-	
-
 }
