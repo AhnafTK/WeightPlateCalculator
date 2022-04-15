@@ -65,7 +65,7 @@ public class UI extends Plates implements ActionListener{
 		weightInputField.setBounds(160, 115, 100, 25);
 		barInputField.setBounds(160, 145, 100, 25);
 		
-		calculate.setBounds(80, 225, 120, 35);
+		calculate.setBounds(85, 225, 120, 35);
 		calculate.setText("Calculate");
 		calculate.addActionListener(this);
 		
@@ -112,12 +112,12 @@ public class UI extends Plates implements ActionListener{
 		twohalffives.setBounds(85,150,200,200);
 		
 		
-		fortyFivesNumber.setBounds(170, 85, 50, 30);
-		thirtyfivesNumber.setBounds(170, 115, 50, 30);
-		twentyfivesNumber.setBounds(170, 145, 50, 30);
-		tensNumber.setBounds(170, 175, 50, 30);
-		fivesNumber.setBounds(170, 205, 50, 30);
-		twohalffivesNumber.setBounds(170, 235, 50, 30);
+		fortyFivesNumber.setBounds(175, 85, 50, 30);
+		thirtyfivesNumber.setBounds(175, 115, 50, 30);
+		twentyfivesNumber.setBounds(175, 145, 50, 30);
+		tensNumber.setBounds(175, 175, 50, 30);
+		fivesNumber.setBounds(175, 205, 50, 30);
+		twohalffivesNumber.setBounds(175, 235, 50, 30);
 		
 		fortyFivesNumber.setEditable(false);
 		thirtyfivesNumber.setEditable(false);
@@ -144,7 +144,7 @@ public class UI extends Plates implements ActionListener{
 		
 		
 		platesNeededPanel.setBorder(blackLine);
-		platesNeededPanel.setBounds(350,25,300,300);
+		platesNeededPanel.setBounds(360,25,300,300);
 		platesNeededPanel.setVisible(true);
 		platesNeededPanel.setLayout(null);
 		return platesNeededPanel;
