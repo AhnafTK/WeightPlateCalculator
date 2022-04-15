@@ -1,6 +1,6 @@
 # WeightPlateCalculator
 * By: Ahnaf Kamal
-* Project time: On and off between Jan and April during school time.
+* Project time: On and off between Jan and April 2022 during school time.
   1) Coding for the calculations done in a week during the month of Jan.
   2) Coding for the UI done in a few days during April.
 
