@@ -9,6 +9,11 @@ Weight Plate Calculator is an excercise tool that calculates the number of weigh
 For example, The user wants to load their barbell for a 135 lbs bench press. They'd need to input the total weight of 135 and the barbell weight of 45.
 Using these two numbers, the program calculates the weight of plates, and how many the user needs.
 
+## What does it use?
+* Written in Java
+  - Uses Arrays, while loops
+  - Swing
+ 
 ## How does it work?
 First, it gathers the user inputs for both the total weight and barbell weight from the JTextFields. If one or both are empty, nothing happens. When the inputs contain double values, it is passed onto the main calculation, which takes into account the barbell weight in the total weight. The result of barbell weight - total weight is divided by 2 for the weight needed on each side, which goes through while loops to determine the number of plates from an array of weights, ranging from 45-2.5 lbs weights. For each iteration of the while loop, the # needed for that weight goes up, which is later used to display the # of plates needed for each weight plate in the UI window.
 
